@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="23BB3CFE-7837-C5B2-08C3-0961213ED97E" name="Order">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>C17699A4-346D-C10B-D92B-92BE113F31E6</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>7C301F2A-31CA-DB3A-CD3B-CEF7C8EE9F49</importedID>
+<abbreviation>Order</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Order_ID" id="6242C5F1-5F75-3252-2A0F-9D40B1F882E9">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>5CE08291-1B4A-4693-0EB2-AC7ECB1851D9</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>09D3EA0A-F9BA-028F-03BD-0A75EF161438</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date_of_order" id="732606DA-37E6-4BCD-75B2-2AB2B92CDC00">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>DC83C9A4-EE4A-1C51-0F42-62ED1F5539FF</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>A3692F0B-C752-C2DA-F331-5AD511D5A9C0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Employee_ID" id="4B37EDEC-28E8-0D11-5185-F4B3FC7718B0">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>32CC4E10-423F-2362-10F1-84A5576EA3FF</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>AC0F71E4-1EA0-7474-31F5-AF02025B604F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="860C5140-1F13-2BEC-6299-59FF8FFE634E" referredColumn="F13C6382-E4F6-A1C3-8486-F061A5870418"/>
+</associations>
+</Column>
+<Column name="Client_ID" id="461BF2DC-F7F0-B0F1-E40F-337514A06372">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>F3ECA990-2BBD-25C0-366B-4464B7B357E1</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>FFF87808-8C0F-7E89-158D-5943B523717A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F4BFF07A-29DB-0EE5-B61B-9E0086D29C76" referredColumn="A0D171A5-7C79-8661-4142-EEA9545BC135"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2792BF17-E89F-C6A5-F322-CAD2FF038172" name="Order_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>160F80A5-71A3-FE41-A5F3-DD9BAF7C2827</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>771D488D-349F-4B3A-6CA3-BB86C2701FA5</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6242C5F1-5F75-3252-2A0F-9D40B1F882E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45D2A6BB-D4E7-80D0-E55C-9E6E09615341" name="Client_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>C67C744C-AD92-72B7-25DE-53F6F24F1488</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="461BF2DC-F7F0-B0F1-E40F-337514A06372"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D75E4257-8245-409C-58BB-3303CF75A8F5" name="Employee_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>7BDB0031-F592-C5E0-AF3D-B8B6ABAE6EA6</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B37EDEC-28E8-0D11-5185-F4B3FC7718B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

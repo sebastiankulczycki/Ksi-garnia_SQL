@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA12666C-536A-DE83-ADE5-4DF3EAE4B74B" name="Order_Book">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>877146AE-6385-B997-9EC7-D9BFCF4334B1</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>78F4DA58-0B16-564D-815B-F5456456300C</importedID>
+<abbreviation>Order_Book</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Order_Book_ID" id="F0B6E686-68E1-5800-D708-B945D74B5B1F">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>C0DCA4D1-2F10-040E-500D-6D38C52718D5</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>98F4F59E-DE6F-389D-1A93-B53B7AAA2221</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Book_ID" id="47EE0485-38B9-7196-A09C-143A254EEFE5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>682540C3-B85B-301C-8140-99248032F779</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>F491DA4D-6E9B-68F7-BED6-F9F5DF4E6E4C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20D0DD58-20A6-1E73-DFC0-6866E68085AB" referredColumn="0E130C4B-4DEF-160D-62CE-765298253C7E"/>
+</associations>
+</Column>
+<Column name="Order_ID" id="17B85268-E635-FC2D-A98E-92DD0621934C">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>FF0C72BC-3B04-2A79-2251-7824C9049254</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>11787AF0-2E89-2949-E484-9A5E51003B0C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43DBDDC4-8C81-D491-6D5D-EE40B90CECA8" referredColumn="6242C5F1-5F75-3252-2A0F-9D40B1F882E9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1925075C-8921-A714-2BCF-F827BBFC4740" name="Order_Book_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>EA5EF4E8-24A5-C967-C0DF-E540DC962F3B</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>D5036099-AC72-D45C-9787-0800755B1621</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0B6E686-68E1-5800-D708-B945D74B5B1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB7C62F7-2217-5D5C-6797-05FFEC546C56" name="Order_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>BC1DC537-5401-B405-A888-BE52D09DD272</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17B85268-E635-FC2D-A98E-92DD0621934C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8AB95BF3-B134-5D82-7393-62E8429F1311" name="Book_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>1CCBF998-71C9-70D7-4F1D-802BAC2C90DD</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47EE0485-38B9-7196-A09C-143A254EEFE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

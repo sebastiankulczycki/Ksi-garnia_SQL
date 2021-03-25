@@ -1,0 +1,292 @@
+-- *******************************************************************************
+-- * 																		     
+-- *   Nazwisko i imię:        Sebastian Kulczycki                                                  
+-- * 																		     
+-- *******************************************************************************
+-- * 																		     
+-- *   Temat projektu:              Księgarnia                                             
+-- * 																		     
+-- *******************************************************************************
+
+-- TWORZENIE STRUKTURY BAZY DANYCH                                        
+-- -------------------------------------------------------------------------------
+
+CREATE TABLE client (
+    client_id  INTEGER NOT NULL,
+    name       NVARCHAR2(20),
+    lastname   NVARCHAR2(20),
+    address    NVARCHAR2(30),
+    city       NVARCHAR2(20),
+    zip        NVARCHAR2(20),
+    contact    NVARCHAR2(40)
+);
+
+ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( client_id );
+
+CREATE TABLE employee (
+    employee_id  INTEGER NOT NULL,
+    name         NVARCHAR2(20),
+    lastname     NVARCHAR2(20),
+    password     NVARCHAR2(20)
+);
+
+ALTER TABLE employee ADD CONSTRAINT employee_pk PRIMARY KEY ( employee_id );
+
+CREATE TABLE "ORDER" (
+    order_id       INTEGER NOT NULL,
+    date_of_order  DATE,
+    employee_id    INTEGER NOT NULL,
+    client_id      INTEGER NOT NULL
+);
+
+ALTER TABLE "ORDER" ADD CONSTRAINT order_pk PRIMARY KEY ( order_id );
+
+CREATE TABLE book_genre (
+    genre_id   INTEGER NOT NULL,
+    name       NVARCHAR2(30)
+);
+
+ALTER TABLE book_genre ADD CONSTRAINT book_genre_pk PRIMARY KEY ( genre_id );
+
+CREATE TABLE book (
+    book_id           INTEGER NOT NULL,
+    title             NVARCHAR2(30),
+    publication_date  DATE,
+    quantity_avaible  INTEGER,
+    book_genre_id     INTEGER NOT NULL,
+    publishing_id     INTEGER NOT NULL
+);
+
+ALTER TABLE book ADD CONSTRAINT book_pk PRIMARY KEY ( book_id );
+
+CREATE TABLE author (
+    author_id  INTEGER NOT NULL,
+    name       NVARCHAR2(20),
+    lastname   NVARCHAR2(20)
+);
+
+ALTER TABLE author ADD CONSTRAINT author_pk PRIMARY KEY ( author_id );
+
+CREATE TABLE authors_book (
+    authors_book_id  INTEGER NOT NULL,
+    author_id        INTEGER NOT NULL,
+    book_id          INTEGER NOT NULL
+);
+
+ALTER TABLE authors_book ADD CONSTRAINT authors_book_pk PRIMARY KEY ( authors_book_id );
+
+CREATE TABLE order_book (
+    order_book_id  INTEGER NOT NULL,
+    book_id        INTEGER NOT NULL,
+    order_id       INTEGER NOT NULL
+);
+
+ALTER TABLE order_book ADD CONSTRAINT order_book_pk PRIMARY KEY ( order_book_id );
+
+CREATE TABLE invoice (
+    invoice_id  INTEGER NOT NULL,
+    invoice#    NVARCHAR2(40),
+    discount    NVARCHAR2(4),
+    payment     INTEGER,
+    tax         NUMBER(6, 2),
+    total       NUMBER(6, 2),
+    order_id    INTEGER NOT NULL
+);
+
+CREATE UNIQUE INDEX invoice__idx ON
+    invoice (
+        order_id
+    ASC );
+
+ALTER TABLE invoice ADD CONSTRAINT invoice_pk PRIMARY KEY ( invoice_id );
+
+CREATE TABLE publishing (
+    publishing_id  INTEGER NOT NULL,
+    name           NVARCHAR2(20)
+);
+
+ALTER TABLE publishing ADD CONSTRAINT publishing_pk PRIMARY KEY ( publishing_id );
+
+ALTER TABLE authors_book
+    ADD CONSTRAINT author_fk FOREIGN KEY ( author_id )
+        REFERENCES author ( author_id );
+
+ALTER TABLE order_book
+    ADD CONSTRAINT book_fk FOREIGN KEY ( book_id )
+        REFERENCES book ( book_id );
+
+ALTER TABLE authors_book
+    ADD CONSTRAINT book_fkv1 FOREIGN KEY ( book_id )
+        REFERENCES book ( book_id );
+
+ALTER TABLE book
+    ADD CONSTRAINT book_genre_fk FOREIGN KEY ( book_genre_id )
+        REFERENCES book_genre ( genre_id );
+
+ALTER TABLE "ORDER"
+    ADD CONSTRAINT client_fk FOREIGN KEY ( client_id )
+        REFERENCES client ( client_id );
+
+ALTER TABLE "ORDER"
+    ADD CONSTRAINT employee_fk FOREIGN KEY ( employee_id )
+        REFERENCES employee ( employee_id );
+
+ALTER TABLE order_book
+    ADD CONSTRAINT order_fk FOREIGN KEY ( order_id )
+        REFERENCES "ORDER" ( order_id );
+
+ALTER TABLE invoice
+    ADD CONSTRAINT order_fkv2 FOREIGN KEY ( order_id )
+        REFERENCES "ORDER" ( order_id );
+
+ALTER TABLE book
+    ADD CONSTRAINT publishing_fk FOREIGN KEY ( publishing_id )
+        REFERENCES publishing ( publishing_id );
+
+-- -------------------------------------------------------------------------------
+-- POLECENIA:   5 X INSERT  DO WSZYSTKICH TABEL                                               
+-- -------------------------------------------------------------------------------
+INSERT ALL 
+INTO PUBLISHING (PUBLISHING_ID, NAME) VALUES (1, 'Helion')
+INTO PUBLISHING (PUBLISHING_ID, NAME) VALUES (2, 'Operon')
+INTO PUBLISHING (PUBLISHING_ID, NAME) VALUES (3, 'Świat książki')
+INTO PUBLISHING (PUBLISHING_ID, NAME) VALUES (4, 'Amber')
+INTO PUBLISHING (PUBLISHING_ID, NAME) VALUES (5, 'Czytelnik')
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO CLIENT (CLIENT_ID, "NAME", LASTNAME, ADDRESS, CITY, ZIP, CONTACT) VALUES (1, 'Jan', 'Kowalski','Polna 1', 'Katowice', '40-001', '888090121')
+INTO CLIENT (CLIENT_ID, "NAME", LASTNAME, ADDRESS, CITY, ZIP, CONTACT) VALUES (2, 'Anna', 'Kowalska','Polna 2', 'Katowice', '40-001', '888090122')
+INTO CLIENT (CLIENT_ID, "NAME", LASTNAME, ADDRESS, CITY, ZIP, CONTACT) VALUES (3, 'Tomasz', 'Kukul','Polna 3', 'Katowice', '40-001', '888090123')
+INTO CLIENT (CLIENT_ID, "NAME", LASTNAME, ADDRESS, CITY, ZIP, CONTACT) VALUES (4, 'Bartek', 'Woda','Polna 4', 'Katowice', '40-001', '888090124')
+INTO CLIENT (CLIENT_ID, "NAME", LASTNAME, ADDRESS, CITY, ZIP, CONTACT) VALUES (5, 'Elżbieta', 'Walczak','Polna 5', 'Katowice', '40-001', '888090125')
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO AUTHOR (AUTHOR_ID, "NAME", LASTNAME) VALUES (1, 'Remigiusz', 'Mróz')
+INTO AUTHOR (AUTHOR_ID, "NAME", LASTNAME) VALUES (2, 'J.R.R', 'Tolkien')
+INTO AUTHOR (AUTHOR_ID, "NAME", LASTNAME) VALUES (3, 'Stephen', 'King')
+INTO AUTHOR (AUTHOR_ID, "NAME", LASTNAME) VALUES (4, 'Dean', 'Kontz')
+INTO AUTHOR (AUTHOR_ID, NAME, LASTNAME) VALUES (5, 'Czeslaw', 'Milosz')
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO EMPLOYEE (EMPLOYEE_ID, "NAME", LASTNAME, "PASSWORD") VALUES (1, 'Piotr', 'Warzywniak','xxxxx')
+INTO EMPLOYEE (EMPLOYEE_ID, "NAME", LASTNAME, "PASSWORD") VALUES (2, 'Aleksandra', 'Kowalska','xxxxx')
+INTO EMPLOYEE (EMPLOYEE_ID, "NAME", LASTNAME, "PASSWORD") VALUES (3, 'Bartosz', 'Kowalski','xxxxx')
+INTO EMPLOYEE (EMPLOYEE_ID, "NAME", LASTNAME, "PASSWORD") VALUES (4, 'Anna', 'Warzywniak','xxxxx')
+INTO EMPLOYEE (EMPLOYEE_ID, "NAME", LASTNAME, "PASSWORD") VALUES (5, 'Krzysztof', 'Koptyko','xxxxx')
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO "ORDER" (ORDER_ID, DATE_OF_ORDER, EMPLOYEE_ID, CLIENT_ID) VALUES (1, '2020-04-09', 1,1)
+INTO "ORDER" (ORDER_ID, DATE_OF_ORDER, EMPLOYEE_ID, CLIENT_ID) VALUES (2, '2020-04-10', 2,2)
+INTO "ORDER" (ORDER_ID, DATE_OF_ORDER, EMPLOYEE_ID, CLIENT_ID) VALUES (3, '2020-04-11', 3,3)
+INTO "ORDER" (ORDER_ID, DATE_OF_ORDER, EMPLOYEE_ID, CLIENT_ID) VALUES (4, '2020-04-12', 4,4)
+INTO "ORDER" (ORDER_ID, DATE_OF_ORDER, EMPLOYEE_ID, CLIENT_ID) VALUES (5, '2020-04-13', 5,5)
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO BOOK_GENRE (GENRE_ID, "NAME") VALUES (1, 'Horror')
+INTO BOOK_GENRE (GENRE_ID, "NAME") VALUES (2, 'Fantasy')
+INTO BOOK_GENRE (GENRE_ID, "NAME") VALUES (3, 'Dramat')
+INTO BOOK_GENRE (GENRE_ID, "NAME") VALUES (4, 'Biografia')
+INTO BOOK_GENRE (GENRE_ID, "NAME") VALUES (5, 'Sci-fi')
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO BOOK (BOOK_ID, TITLE, PUBLICATION_DATE, QUANTITY_AVAIBLE, BOOK_GENRE_ID, PUBLISHING_ID) VALUES (1, 'IT', '1986-9-15', 2, 1, 1)
+INTO BOOK (BOOK_ID, TITLE, PUBLICATION_DATE, QUANTITY_AVAIBLE, BOOK_GENRE_ID, PUBLISHING_ID) VALUES (2, 'ECHO Z OTCHŁANII', '2020-02-12', 1, 5, 2)
+INTO BOOK (BOOK_ID, TITLE, PUBLICATION_DATE, QUANTITY_AVAIBLE, BOOK_GENRE_ID, PUBLISHING_ID) VALUES (3, 'Abecadlo', '1997-9-15', 8, 4, 3)
+INTO BOOK (BOOK_ID, TITLE, PUBLICATION_DATE, QUANTITY_AVAIBLE, BOOK_GENRE_ID, PUBLISHING_ID) VALUES (4, 'Hobbit, czyli tam i z powrotem', '1937-9-21', 12, 2, 4)
+INTO BOOK (BOOK_ID, TITLE, PUBLICATION_DATE, QUANTITY_AVAIBLE, BOOK_GENRE_ID, PUBLISHING_ID) VALUES (5, 'Oczy ciemności', '1981-2-1', 20, 3, 5)
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO AUTHORS_BOOK (AUTHORS_BOOK_ID, AUTHOR_ID, BOOK_ID) VALUES (1, 1, 2)
+INTO AUTHORS_BOOK (AUTHORS_BOOK_ID, AUTHOR_ID, BOOK_ID) VALUES (2, 2, 4)
+INTO AUTHORS_BOOK (AUTHORS_BOOK_ID, AUTHOR_ID, BOOK_ID) VALUES (3, 3, 1)
+INTO AUTHORS_BOOK (AUTHORS_BOOK_ID, AUTHOR_ID, BOOK_ID) VALUES (4, 4, 5)
+INTO AUTHORS_BOOK (AUTHORS_BOOK_ID, AUTHOR_ID, BOOK_ID) VALUES (5, 5, 3)
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO INVOICE (INVOICE_ID, INVOICE#, DISCOUNT, PAYMENT, TAX, TOTAL, ORDER_ID) VALUES (1, '1000', '0%', 100, 23, 123, 1)
+INTO INVOICE (INVOICE_ID, INVOICE#, DISCOUNT, PAYMENT, TAX, TOTAL, ORDER_ID) VALUES (2, '1001', '0%', 101, 23, 124.23, 2)
+INTO INVOICE (INVOICE_ID, INVOICE#, DISCOUNT, PAYMENT, TAX, TOTAL, ORDER_ID) VALUES (3, '1002', '0%', 102, 23, 125.46, 3)
+INTO INVOICE (INVOICE_ID, INVOICE#, DISCOUNT, PAYMENT, TAX, TOTAL, ORDER_ID) VALUES (4, '1003', '0%', 103, 23, 126.69, 4)
+INTO INVOICE (INVOICE_ID, INVOICE#, DISCOUNT, PAYMENT, TAX, TOTAL, ORDER_ID) VALUES (5, '1004', '0%', 104, 23, 127.92, 5)
+SELECT * FROM DUAL;
+
+INSERT ALL 
+INTO ORDER_BOOK (ORDER_BOOK_ID, ORDER_ID, BOOK_ID) VALUES (1, 1, 1)
+INTO ORDER_BOOK (ORDER_BOOK_ID, ORDER_ID, BOOK_ID) VALUES (2, 1, 2)
+INTO ORDER_BOOK (ORDER_BOOK_ID, ORDER_ID, BOOK_ID) VALUES (3, 2, 2)
+INTO ORDER_BOOK (ORDER_BOOK_ID, ORDER_ID, BOOK_ID) VALUES (4, 3, 3)
+INTO ORDER_BOOK (ORDER_BOOK_ID, ORDER_ID, BOOK_ID) VALUES (5, 4, 4)
+SELECT * FROM DUAL;
+
+-- -------------------------------------------------------------------------------
+-- POLECENIA:   3 X SELECT  ( PRZYKŁADY Z JOIN NA MIN. 3 TABELACH)                                                                                       
+-- -------------------------------------------------------------------------------
+
+SELECT
+"ORDER".ORDER_ID,"ORDER".DATE_OF_ORDER,EMPLOYEE.EMPLOYEE_ID,EMPLOYEE.NAME,EMPLOYEE.LASTNAME,CLIENT.CLIENT_ID,CLIENT.NAME,CLIENT.LASTNAME
+FROM "ORDER", EMPLOYEE, CLIENT
+WHERE "ORDER".EMPLOYEE_ID=EMPLOYEE.EMPLOYEE_ID
+AND "ORDER".CLIENT_ID=CLIENT.CLIENT_ID ORDER BY DATE_OF_ORDER DESC;
+
+SELECT BOOK.BOOK_ID,BOOK.TITLE, BOOK_GENRE.NAME FROM BOOK JOIN BOOK_GENRE
+ON(BOOK_GENRE.GENRE_ID=BOOK.BOOK_GENRE_ID);
+
+SELECT "ORDER".ORDER_ID, "ORDER".DATE_OF_ORDER, (CLIENT.NAME) AS CLIENT_NAME, (CLIENT.LASTNAME) AS CLIENT_LASTNAME, (BOOK.TITLE) AS BOOK_TITLE, 
+(INVOICE.INVOICE#) AS INVOICE_NUMBER, 
+(INVOICE.TOTAL) AS TOTAL_PRICE, 
+(EMPLOYEE.EMPLOYEE_ID) AS OPERATOR_NUMBER
+FROM "ORDER", CLIENT, BOOK, INVOICE, EMPLOYEE, ORDER_BOOK
+WHERE "ORDER".ORDER_ID=ORDER_BOOK.ORDER_ID AND BOOK.BOOK_ID=ORDER_BOOK.BOOK_ID AND INVOICE.ORDER_ID="ORDER".ORDER_ID AND CLIENT.CLIENT_ID="ORDER".ORDER_ID 
+AND "ORDER".EMPLOYEE_ID=EMPLOYEE.EMPLOYEE_ID;
+
+-- -------------------------------------------------------------------------------
+-- POLECENIA:   3 X UPDATE DO WSZYSTKICH TABEL                                                                                
+-- -------------------------------------------------------------------------------
+UPDATE BOOK
+SET QUANTITY_AVAIBLE = 20
+WHERE QUANTITY_AVAIBLE<(SELECT
+AVG(QUANTITY_AVAIBLE) FROM BOOK);
+
+UPDATE CLIENT
+SET ADDRESS = 'Kwiatowa 20', CITY = 'Gliwice', ZIP ='44-100'
+WHERE CLIENT_ID=(SELECT
+CLIENT_ID FROM "ORDER" WHERE DATE_OF_ORDER='2020-4-9');
+
+UPDATE ORDER_BOOK
+SET BOOK_ID = 5
+WHERE ORDER_ID = (SELECT ORDER_ID FROM "ORDER" WHERE ORDER_ID =2)
+-- -------------------------------------------------------------------------------
+-- POLECENIA:   3 X DELETE DO WSZYSTKICH TABEL                                                   
+-- -------------------------------------------------------------------------------
+DELETE FROM INVOICE
+WHERE INVOICE.ORDER_ID = (
+SELECT ORDER_ID FROM "ORDER" WHERE ORDER_ID= 1);
+
+DELETE FROM ORDER_BOOK
+WHERE ORDER_ID = (SELECT ORDER_ID FROM "ORDER" WHERE ORDER_ID = 1);
+
+DELETE FROM AUTHORS_BOOK
+WHERE AUTHOR_ID=(
+SELECT AUTHORS_BOOK.AUTHOR_ID FROM AUTHORS_BOOK, AUTHOR WHERE AUTHORS_BOOK.AUTHOR_ID = AUTHOR.AUTHOR_ID AND AUTHOR.AUTHOR_ID=1);
+-- -------------------------------------------------------------------------------
+-- USUWANIE STRUKTURY BAZY DANYCH                                            
+-- -------------------------------------------------------------------------------
+DROP TABLE AUTHORS_BOOK;
+DROP TABLE AUTHOR;
+DROP TABLE ORDER_BOOK;
+DROP TABLE BOOK;
+DROP TABLE BOOK_GENRE;
+DROP TABLE INVOICE;
+DROP TABLE "ORDER";
+DROP TABLE CLIENT;
+DROP TABLE EMPLOYEE;
+DROP TABLE PUBLISHING;
+

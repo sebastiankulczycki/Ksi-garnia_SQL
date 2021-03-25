@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="152D5F1A-FB23-3159-39C2-1A25C0371EF6" name="Authors_book">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>7DE615BD-E879-BE03-583D-7D86ABB505AA</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>EF9770CA-B72A-9C7A-A5AF-85AE7033CE5E</importedID>
+<abbreviation>Authors_book</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Authors_book_ID" id="FA5C8066-0326-B825-5CC7-B7ACF1A7F697">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>91AACB97-FE14-4079-D7A4-F0921CFE6162</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>A806812B-8EC3-7456-C65A-5C683819E693</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Author_ID" id="07662F4C-4E6C-136A-09C9-75E890598051">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>E4AF2637-DAC9-4A44-4C4F-AB45E40DA8B3</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>A2167F29-1FAA-19A8-62DF-0FA60F6A45B9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A37C4E99-380D-27A1-6C00-939A72396C81" referredColumn="FB56E7C9-F153-BD2E-C43B-4B278B5FEE1B"/>
+</associations>
+</Column>
+<Column name="Book_ID" id="DD3DCA4C-E589-0931-1971-6E40A59A4EF7">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>2A544B26-4198-C086-9540-1E71F896F187</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>082661C6-42FD-AF8F-6A79-F6ACF37A3D17</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="850695EB-A779-B782-1696-6C6BE6D6368F" referredColumn="0E130C4B-4DEF-160D-62CE-765298253C7E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE178665-57EB-EF51-6E25-DC1B85699ED0" name="Authors_book_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>CB0F7E57-A627-E604-359D-0DB7A2B944FF</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>5EE8A005-CF87-CAA7-50B6-913409482106</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA5C8066-0326-B825-5CC7-B7ACF1A7F697"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39DD91A4-06B2-A44F-4EC1-C6B227FF5851" name="Book_FKv1">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>0886B505-D6DD-F49F-5151-B9A54E45D447</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD3DCA4C-E589-0931-1971-6E40A59A4EF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC5611D6-326E-D287-8EFD-45BA7B112E7B" name="Author_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>4F64BC97-273B-1B4F-41E3-55C4C4EEBDDF</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07662F4C-4E6C-136A-09C9-75E890598051"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

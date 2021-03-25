@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFADCF6A-8F2D-621B-63CC-5B0A0A0E2196" name="Author">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>965B23C9-1B4D-4E7B-DF7B-1015455BFC49</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>7FF90E31-0451-F2E5-F927-7941E1EFAB49</importedID>
+<abbreviation>Author</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Author_ID" id="FB56E7C9-F153-BD2E-C43B-4B278B5FEE1B">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>17107862-B261-08B9-F6ED-0E890A72E392</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>DA80461F-FC40-340A-8D69-679BA86B3173</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="AD1F359A-63B6-F4E1-1253-7B3DD9F136D4">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>78A1ACD4-791D-9FEE-D231-F476BAB82B44</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>6F34BD28-24DB-AA7D-6578-D6791A65F8B9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lastname" id="EFDDA0F9-BEB6-18E2-63D1-5FEA6F012515">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>1C60CEF9-3D6C-6E35-5C1E-F9A69DA868CC</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>B98406AD-453B-E908-6B2B-FEB2BDCD6FC6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="837DFD4B-49FD-9512-C3D6-46317B079459" name="Author_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>ED45D788-C0C2-44A8-CEA6-64F40320AC24</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>47DED3E5-1B4A-6A13-F740-6FAA583AC909</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB56E7C9-F153-BD2E-C43B-4B278B5FEE1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

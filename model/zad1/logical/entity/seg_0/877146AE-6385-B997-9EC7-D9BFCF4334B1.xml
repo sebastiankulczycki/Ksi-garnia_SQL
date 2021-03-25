@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="877146AE-6385-B997-9EC7-D9BFCF4334B1" name="Order_Book">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>DED75B61-6A1F-9F1B-057C-C567E1F888A6</importedID>
+<engineerTo>
+<item key="53794FB6-01AD-5C1B-5A63-629C267709A6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Order_Book</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Order_Book_ID" id="C0DCA4D1-2F10-040E-500D-6D38C52718D5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>81EEF12A-F44E-0FE1-8EC0-B85A3829AD36</importedID>
+<engineerTo>
+<item key="53794FB6-01AD-5C1B-5A63-629C267709A6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Book_ID" id="682540C3-B85B-301C-8140-99248032F779">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>1CCBF998-71C9-70D7-4F1D-802BAC2C90DD</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>F8A9DB2E-DB8D-47BD-A5FE-C9BFD7DEB392</importedID>
+<engineerTo>
+<item key="53794FB6-01AD-5C1B-5A63-629C267709A6" value="true"/>
+</engineerTo>
+<referedAttribute>865EDED8-ACFF-AB12-C2D1-F129F6E9301F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Order_ID" id="FF0C72BC-3B04-2A79-2251-7824C9049254">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>BC1DC537-5401-B405-A888-BE52D09DD272</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>5E40A817-E1D1-A58A-1D4D-3BAB92194CAB</importedID>
+<engineerTo>
+<item key="53794FB6-01AD-5C1B-5A63-629C267709A6" value="true"/>
+</engineerTo>
+<referedAttribute>5CE08291-1B4A-4693-0EB2-AC7ECB1851D9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EA5EF4E8-24A5-C967-C0DF-E540DC962F3B" name="Order_Book PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>FCEAEDCC-9717-0429-758E-6F1ADEF62644</importedID>
+<engineerTo>
+<item key="53794FB6-01AD-5C1B-5A63-629C267709A6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C0DCA4D1-2F10-040E-500D-6D38C52718D5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

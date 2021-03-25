@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="75387766-C2BF-FC7A-4823-250A3C1C03DE" containerWithKeyObject="6DEF6E8E-66D8-6D91-641D-DBB62A449DA9" localFKIndex="CBF2C3ED-112C-CEC2-F780-960FF1DD62C4" name="Book_genre_FK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>7F458841-B817-6CF7-7AFD-7EC40B931BAF</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>93C2DD2C-D53B-8DFA-E454-DCC80DE6BAC0</importedID>
+<referredTableLongName>Book_genre</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>97F07C1B-6B62-F51D-62F0-6A06C8EC3D50</referredTableID>
+<keyObject>3A19B0BF-DC09-D165-BAE3-6D74AB306A08</keyObject>
+<referredKeyID>3A19B0BF-DC09-D165-BAE3-6D74AB306A08</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Genre_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

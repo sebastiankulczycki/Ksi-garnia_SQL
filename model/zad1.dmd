@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="zad1" id="5E6C9153-1488-F467-3C39-8D544A93F03E" version="3.5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:42:24 UTC</createdTime>
+<ownerDesignName>zad1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5E6C9153-1488-F467-3C39-8D544A93F03E</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="2D14DF39-6678-BC40-A283-2E31F477021D">
+<designStoragePath>C:\Users\sebas\Desktop\Studia\2 rok\Modelowanie\x</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C427EF1B-E278-B1CC-EA68-A6366B4C4853">
+<designStoragePath>C:\Users\sebas\Desktop\Studia\2 rok\Modelowanie\Modelowanie baz danych - księgarnia ERD</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FD3A471B-BC3D-7386-16C8-838F250710EA" name="Invoice">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>BC864547-E93C-3324-2793-4DE0843D395B</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>ADBE1357-8BA3-6F0F-BF74-2615A983F3E3</importedID>
+<abbreviation>Invoice</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Invoice_ID" id="000C1455-88E5-82AF-A88F-9E8FA348F7D5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>2A984AF7-A273-A88C-1C15-6DCE26256715</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>85CBA9D3-A6F7-C5B4-45F6-002CD16773B8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Invoice#" id="C999A49F-D68D-FFCA-DBDE-D764E7E02FBF">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>F5B99831-5BB2-0BF9-FD11-D75D0AFC70C5</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>602AF720-5F20-0C77-C364-AE92EBC36F8E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Discount" id="0F90F67F-B2F9-CB28-1189-10314EDD5C72">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>E5C5FE33-4389-674F-68A6-5189A71E0F20</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>69946C88-8CAD-F5B3-948E-E9F99FBBA21D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>4 CHAR</dataTypeSize>
+<ownDataTypeParameters>4 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Payment" id="8169A3FB-053A-74B8-69E0-B1245D2E27AE">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>64E4EBF2-A876-38C4-6EFA-6008F64B5960</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>1372A656-77DF-E4F5-170B-17BB2912AB26</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tax" id="13C89C9B-9156-A112-BBEE-7FA7193B519A">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>4482B467-5B21-BDD4-9F30-AF1C8179F253</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>AE1A5D63-FEFC-051A-354E-D301C1D1073A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total" id="6FB90CE1-2CF6-6371-B040-DD663DE926AD">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>95D48D1A-DCEE-0A23-C55F-E426894770C6</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>727EEEFF-2750-DAB1-F2E0-4EAF72C2924D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Order_ID" id="3019B3CB-D064-07FB-9073-A73EFAAE7E65">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>EAF284F0-A27E-6501-7D90-A41D43FE30C0</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>F55F388F-56B7-84CB-8C13-5862E224EC82</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14DDE83C-A08B-085A-DCDA-0DA47E2B4406" referredColumn="6242C5F1-5F75-3252-2A0F-9D40B1F882E9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D0DFE4B8-2478-93C5-0683-11002EA88500" name="Invoice_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>74571243-0DAC-ECB9-FC8B-5433D517073F</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>9940E3C7-8D3A-1A5F-6434-DC019994FB9F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="000C1455-88E5-82AF-A88F-9E8FA348F7D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1051005E-4D52-F2FD-9DEA-9F18C1F230C3" name="Invoice__IDX">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>DAB643EC-2384-CECB-F1C0-CB40FC312BE5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3019B3CB-D064-07FB-9073-A73EFAAE7E65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93C3FB95-667C-9383-C3F2-B3504776FA75" name="Order_FKv2">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>BD2021A6-027C-C733-42FA-A2E5C9AAFA24</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3019B3CB-D064-07FB-9073-A73EFAAE7E65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

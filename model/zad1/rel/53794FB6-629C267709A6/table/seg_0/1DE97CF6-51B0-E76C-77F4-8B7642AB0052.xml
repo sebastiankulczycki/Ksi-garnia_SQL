@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1DE97CF6-51B0-E76C-77F4-8B7642AB0052" name="Client">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>148892B8-70C8-B45D-58B8-6902034B6FCE</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>79C3BE88-8F09-54A3-6403-8E443A7B889F</importedID>
+<abbreviation>Client</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Client_ID" id="A0D171A5-7C79-8661-4142-EEA9545BC135">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>5DBC6786-E461-8A80-407A-380D6DFD3248</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>4AAEE2D4-F141-76BF-06D6-5B6092C7CE5F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="AA3047A0-BC93-1B8B-9C90-035AF4322794">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>17397FD3-229C-F11C-9C93-9BB068D815C8</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>7D41F905-DF29-1D54-E774-AC6F6998744F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lastname" id="483F51C5-5F6D-9648-7C17-C3C282AD67A5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>FFCD41C2-6CA9-A8DC-61FD-EE56C9302C08</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>60615642-75C0-0CFC-9B16-9F23E68AE2EB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Address" id="601B4C5D-8D04-8A56-36E2-41212400C9D6">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>E279948F-4A2B-4ADE-83C6-EC29B74E5AE8</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>AF7A427A-2448-641A-DEBB-852AE7E4415C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="A0E53B6A-277C-0F63-E036-9EE32A1B9F06">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>D73F0D15-4B55-1D0D-C892-7F2C708CC1CC</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>3E1DF06E-9F20-A49A-A8C6-99CA39A3CE3A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZIP" id="05DCAE84-B79B-B04D-90F6-41FB1CEA930E">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>BA33F54B-D707-C479-AA5C-A182299E7C14</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>DE87C2C0-1369-0813-9607-C5EEFD67B15F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contact" id="AC4A720C-42F6-4DC3-4AA5-4EA20F7F74A9">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>78E3DF6A-4432-DB42-FE81-2E6B37DB077D</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>4F267916-2966-20E6-23B6-90D084092478</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EAAF52D5-CA1D-F3D6-5911-CABEE9BA3881" name="Client_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>429AEA39-7C96-96E6-0641-9FABCDDE9BBB</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>69A7726C-8449-6846-67FF-5948F1C6139A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0D171A5-7C79-8661-4142-EEA9545BC135"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

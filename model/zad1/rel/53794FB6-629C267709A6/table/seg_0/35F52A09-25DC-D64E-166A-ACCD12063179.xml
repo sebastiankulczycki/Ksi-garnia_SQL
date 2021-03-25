@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35F52A09-25DC-D64E-166A-ACCD12063179" name="Employee">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>9F0F79F0-9371-F387-1F35-7BCE385A156A</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>9DB06ADE-479C-8435-5784-B09AABCFBB1F</importedID>
+<abbreviation>Employee</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Employee_ID" id="F13C6382-E4F6-A1C3-8486-F061A5870418">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>3542CE6E-7952-7396-8031-D1547308945A</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>269F044D-C020-B3B3-8EEA-0030156CEAAA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="B191F471-1419-E751-6DC1-CB6578B6DDB9">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>6DDD94E4-922B-58C7-4B91-A54DC98CA271</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>64A65E19-CB3B-56F7-D9B5-FD2104148E38</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lastname" id="7C4F535E-CA38-B3AD-2EAF-A343EC6D6AB5">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>B5B8A409-3820-C231-996E-E92469A3E422</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>A36180CB-5AE7-903D-5C5A-794217AC2852</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Password" id="1751900A-D980-A1F6-3EC6-BDC0E486E907">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>2C992B1A-C0B1-1184-DE3E-DE58B44480B4</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>48AB7A74-58C2-6A12-D074-2406A161AE7E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1215DE3-CF8E-3B86-AAE0-307328C86D22" name="Employee_PK">
+<createdBy>sebas</createdBy>
+<createdTime>2021-03-02 12:43:32 UTC</createdTime>
+<generatorID>499B3A02-B628-44EF-0868-1C57FE39595A</generatorID>
+<ownerDesignName>zad1</ownerDesignName>
+<importedID>D7D38C89-0F31-2FEF-81F8-3129CA5C855B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F13C6382-E4F6-A1C3-8486-F061A5870418"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
